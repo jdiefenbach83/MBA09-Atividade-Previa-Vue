@@ -62,34 +62,34 @@ export default class Imc extends Vue {
   private weight = '';
   
   get calculateIMC(): string {
-    const calculatedIMC: number = +this.weight / ((+this.height / 100) ** 2);
-    const imcToReturn = calculatedIMC.toFixed(2);
+    const imc: number = +this.weight / ((+this.height / 100) ** 2);
+    const imcToReturn = imc.toFixed(2);
 
-    if (calculatedIMC >= 16 && calculatedIMC <= 16.9) {
+    if (imc >= 16 && imc < 17) {
       return `${imcToReturn} kg/m²: Muito abaixo do peso`;
     }
 
-    if (calculatedIMC >= 17 && calculatedIMC <= 18.4) {
+    if (imc >= 17 && imc < 18.5) {
       return `${imcToReturn} kg/m²: Abaixo do peso`;
     }
 
-    if (calculatedIMC >= 18.5 && calculatedIMC <= 24.9) {
+    if (imc >= 18.5 && imc < 25) {
       return `${imcToReturn} kg/m²: Peso normal`;
     }
 
-    if (calculatedIMC >= 25 && calculatedIMC <= 29.9) {
+    if (imc >= 25 && imc < 30) {
       return `${imcToReturn} kg/m²: Acima do peso`;
     }
 
-    if (calculatedIMC >= 30 && calculatedIMC <= 34.9) {
+    if (imc >= 30 && imc < 35) {
       return `${imcToReturn} kg/m²: Obesidade grau 1`;
     }
 
-    if (calculatedIMC >= 35 && calculatedIMC <= 40) {
+    if (imc >= 35 && imc <= 40) {
       return `${imcToReturn} kg/m²: Obesidade grau 2`;
     }
 
-    if (calculatedIMC > 40) {
+    if (imc > 40) {
       return `${imcToReturn} kg/m²: Obesidade grau 3`;
     }
     
