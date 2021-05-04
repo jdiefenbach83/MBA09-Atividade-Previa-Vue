@@ -1,4 +1,4 @@
-# imc
+# MBA09-Atividade-Previa-Vue - IMC
 
 ## Project setup
 ```
